@@ -2,6 +2,7 @@ import ParticlesBackground from '@/components/ui/particles-background';
 import NavBar from './sections/navbar';
 import Introduction from './sections/introduction';
 import Skills from './sections/skills';
+import Experience from './sections/experience';
 
 export default function Home() {
 	return (
@@ -16,6 +17,7 @@ export default function Home() {
 					<Introduction />
 				</section>
 				<Skills />
+				<Experience />
 			</main>
 		</>
 	);
