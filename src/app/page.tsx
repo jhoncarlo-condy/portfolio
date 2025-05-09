@@ -1,6 +1,6 @@
 import ParticlesBackground from '@/components/ui/particles-background';
-import NavBar from './navbar';
-import Introduction from './introduction';
+import NavBar from './sections/navbar';
+import Introduction from './sections/introduction';
 
 export default function Home() {
 	return (
