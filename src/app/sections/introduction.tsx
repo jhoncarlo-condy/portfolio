@@ -4,14 +4,11 @@ import React from 'react';
 import { Typewriter } from 'react-simple-typewriter';
 const Introduction = () => {
 	return (
-		<div className='flex flex-col items-center justify-center w-1 p-10'>
-			<div className='flex space-x-1 my-6'>
+		<div className='flex flex-col items-center justify-center w-full px-4 py-10 sm:w-1'>
+			<div className='flex flex-col sm:flex-row sm:space-x-1 my-6'>
 				<div className='overflow-hidden pb-2'>
 					<div
-						className='text-xs sm:text-base md:text-xl lg:text:3xl xl:text-5xl font-bold'
-						style={{
-							whiteSpace: 'nowrap',
-						}}
+						className='text-[2.5rem] sm:text-[3.3rem] md:text-[4.2rem] font-black leading-[3rem] sm:leading-[4rem] text-[#111] dark:text-[#f3f3f3] sm:whitespace-nowrap items-center justify-center text-center'
 					>
 						<span style={{ color: 'blue', fontWeight: 'bold' }}>
 							<Typewriter
