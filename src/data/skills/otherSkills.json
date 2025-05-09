@@ -1,0 +1,54 @@
+[
+	{
+		"skillName": "TypeScript",
+		"skillPicture": "typescript.svg"
+	},
+    {
+		"skillName": "JavaScript",
+		"skillPicture": "javascript.svg"
+	},
+    {
+		"skillName": "Git",
+		"skillPicture": "git.svg"
+	},
+    {
+		"skillName": "Docker",
+		"skillPicture": "docker.svg"
+	},
+    {
+		"skillName": "AWS",
+		"skillPicture": "aws.svg"
+	},
+    {
+		"skillName": "Postman",
+		"skillPicture": "postman.svg"
+	},
+    {
+		"skillName": "Github",
+		"skillPicture": "github.svg"
+	},
+    {
+		"skillName": "Gitlab",
+		"skillPicture": "gitlab.svg"
+	},
+    {
+		"skillName": "Bitbucket",
+		"skillPicture": "bitbucket.svg"
+	},
+    {
+		"skillName": "Trello",
+		"skillPicture": "trello.svg"
+	},
+    {
+		"skillName": "Asana",
+		"skillPicture": "asana.svg"
+	},
+    {
+		"skillName": "Clickup",
+		"skillPicture": "clickup.svg"
+	},
+    {
+		"skillName": "Jira",
+		"skillPicture": "jira.svg"
+	}
+]
