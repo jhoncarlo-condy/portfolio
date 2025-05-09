@@ -44,7 +44,7 @@ const Introduction = () => {
 
 			<div
 				id='scroll-arrow'
-				className='absolute bottom-10 left-1/2 transform -translate-x-1/2 transition-opacity duration-300'
+				className='absolute bottom-0 left-1/2 transform -translate-x-1/2 transition-opacity duration-300'
 			>
 				<a
 					href='#about'

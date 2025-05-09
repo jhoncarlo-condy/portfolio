@@ -3,7 +3,7 @@ import React from 'react';
 
 const NavBar = () => {
 	return (
-		<div className='p-10'>
+		<div>
 			<div className='mx-auto max-w-2xl px-4 py-2'>
 				<div className='flex items-center justify-between text-sm text-zinc-500 dark:text-zinc-400'>
 					<div className='flex items-center gap-3 animate-fade-right'>
