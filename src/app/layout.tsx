@@ -4,7 +4,6 @@ import './globals.css';
 import { Home, MessageCircle, User } from 'lucide-react';
 import { FloatingNav } from '@/components/ui/floating-navbar';
 import { BackgroundBeamsWithCollision } from '@/components/ui/background-beams-with-collision';
-import ParticlesBackground from '@/components/ui/particles-background';
 const geistSans = Geist({
 	variable: '--font-geist-sans',
 	subsets: ['latin'],

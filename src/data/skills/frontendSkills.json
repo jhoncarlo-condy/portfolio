@@ -1,0 +1,34 @@
+[
+	{
+		"skillName": "Next.JS",
+		"skillPicture": "nextjs.svg"
+	},
+	{
+		"skillName": "React.JS",
+		"skillPicture": "reactjs.svg"
+	},
+	{
+		"skillName": "Vue.JS",
+		"skillPicture": "vuejs.svg"
+	},
+	{
+		"skillName": "Tailwind CSS",
+		"skillPicture": "tailwind.svg"
+	},
+    {
+		"skillName": "Laravel Nova",
+		"skillPicture": "laravelnova.svg"
+	},
+    {
+		"skillName": "Livewire",
+		"skillPicture": "livewire.svg"
+	},
+    {
+		"skillName": "Bootstrap",
+		"skillPicture": "bootstrap.svg"
+	},
+    {
+		"skillName": "HTML5",
+		"skillPicture": "html.svg"
+	}
+]

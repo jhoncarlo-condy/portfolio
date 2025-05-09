@@ -1,0 +1,26 @@
+[
+    {
+		"skillName": "Laravel",
+		"skillPicture": "laravel.svg"
+	},
+    {
+		"skillName": "PHP",
+		"skillPicture": "php.svg"
+	},
+    {
+		"skillName": "MySQL",
+		"skillPicture": "mysql.svg"
+	},
+    {
+		"skillName": "JWT",
+		"skillPicture": "jwt.svg"
+	},
+    {
+		"skillName": "Firebase",
+		"skillPicture": "firebase.svg"
+	},
+    {
+		"skillName": "Livewire",
+		"skillPicture": "livewire.svg"
+	}
+]
