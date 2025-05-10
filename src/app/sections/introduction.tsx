@@ -1,15 +1,34 @@
 'use client';
 import { ArrowDown, FileText, MessageCircleMore } from 'lucide-react';
-import React from 'react';
+import React, { useEffect, useState } from 'react';
 import { Typewriter } from 'react-simple-typewriter';
 const Introduction = () => {
+	const [isVisible, setIsVisible] = useState(true);
+	const [prevScrollPos, setPrevScrollPos] = useState(0);
+
+	useEffect(() => {
+		const handleScroll = () => {
+			const currentScrollPos = window.pageYOffset;
+			const isScrollingDown = currentScrollPos > prevScrollPos;
+
+			if (currentScrollPos === 0 || !isScrollingDown) {
+				setIsVisible(true);
+			} else {
+				setIsVisible(false);
+			}
+
+			setPrevScrollPos(currentScrollPos);
+		};
+
+		window.addEventListener('scroll', handleScroll);
+		return () => window.removeEventListener('scroll', handleScroll);
+	}, [prevScrollPos]);
+
 	return (
 		<div className='flex flex-col items-center justify-center w-full px-4 py-10 sm:w-1'>
 			<div className='flex flex-col sm:flex-row sm:space-x-1 my-6'>
 				<div className='overflow-hidden pb-2'>
-					<div
-						className='text-[2.5rem] sm:text-[3.3rem] md:text-[4.2rem] font-black leading-[3rem] sm:leading-[4rem] text-[#111] dark:text-[#f3f3f3] sm:whitespace-nowrap items-center justify-center text-center'
-					>
+					<div className='text-[2.5rem] sm:text-[3.3rem] md:text-[4.2rem] font-black leading-[3rem] sm:leading-[4rem] text-[#111] dark:text-[#f3f3f3] sm:whitespace-nowrap items-center justify-center text-center'>
 						<span style={{ color: 'blue', fontWeight: 'bold' }}>
 							<Typewriter
 								words={[
@@ -41,14 +60,16 @@ const Introduction = () => {
 
 			<div
 				id='scroll-arrow'
-				className='absolute bottom-0 left-1/2 transform -translate-x-1/2 transition-opacity duration-300'
+				className={`absolute bottom-0 left-1/2 transform -translate-x-1/2 transition-opacity duration-300 ${
+					isVisible ? 'opacity-100' : 'opacity-0 pointer-events-none'
+				}`}
 			>
 				<a
 					href='#about'
 					className='flex flex-col items-center text-muted-foreground hover:text-foreground transition-colors'
 				>
 					<span className='text-sm font-medium mb-2'>Scroll Down</span>
-					<ArrowDown className='h5-w-5 animate-bounce' />
+					<ArrowDown className='h-5 w-5 animate-bounce' />
 				</a>
 			</div>
 		</div>
