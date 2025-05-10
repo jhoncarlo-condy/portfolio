@@ -12,7 +12,7 @@ import otherSkills from '@/data/skills/otherSkills.json';
 
 const Skills = () => {
 	return (
-		<section id='skills' className='px-4 py-10 sm:px-6 md:px-10'>
+		<section id='skills'>
 			<div className='space-y-2 text-center sm:text-left'>
 				<h2 className='text-2xl sm:text-3xl font-bold'>Skills & Expertise</h2>
 				<p className='text-sm sm:text-base text-muted-foreground max-w-xl mx-auto sm:mx-0'>
