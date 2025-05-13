@@ -1,0 +1,40 @@
+[
+	{
+		"title": "ADEC Innovations",
+		"date": "November 2024 - March 2025",
+		"image": "nextjs.svg",
+		"imageAlt": "ADEC Innovations office",
+		"contentList": [
+			"Developed an internal web application using React, React Query, ShadcnUI and TypeScript that enabled users to access the company’s resources with ease ",
+			"Maintain and support internal web applications by developing and enhancing features using AngularJS for the frontend and Java Spring Boot for the backend"
+		]
+	},
+	{
+		"title": "Grapelabs Technologies Corp.",
+		"date": "March 2022 - August 2024",
+		"image": "gitlab.svg",
+		"imageAlt": "Grapelabs Technologies Corp.",
+		"contentTitle": "Led rontend development for sustainability analytics platform",
+		"contentList": [
+			"Maintain and develop CRM Website",
+			"Integrate third-party services and payment solutions",
+			"Implement unit tests to ensure quality code",
+			"Secure customer information using micro-services such as AWS",
+			"Creating reports for analytics using MySQL and VueJS",
+			"Create and Manage admin panel using Laravel Nova"
+		]
+	},
+	{
+		"title": "Hivelabs Technologies Corp.",
+		"date": "May 2021 - February 2024",
+		"image": "aws.svg",
+		"imageAlt": "Hivelabs Technologies Corp.",
+		"contentList": [
+			"Collaborate with mobile developers to maintain seamless implementation of API’s",
+			"Integrate third party services and optimize API for better performance and response time",
+			"Manage admin panel using Laravel and Livewire",
+			"Complete detailed programming and development tasks for back-end server code",
+			"Carry out quality assurance tests to discover errors and optimize usability"
+		]
+	}
+]

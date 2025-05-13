@@ -21,7 +21,7 @@ const Skills = () => {
 				</p>
 			</div>
 
-			<div className='mt-8 flex justify-center sm:justify-start'>
+			<div className='mt-8 flex justify-center sm:justify-start xl:ml-30'>
 				<Tabs defaultValue='frontend' className='w-full max-w-md sm:max-w-2xl'>
 					<TabsList className='flex flex-wrap justify-center sm:justify-start gap-2'>
 						<TabsTrigger value='frontend' className='hover:cursor-pointer'>Frontend</TabsTrigger>
