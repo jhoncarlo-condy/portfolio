@@ -1,0 +1,29 @@
+[
+	{
+		"title": "Portfolio",
+		"description": "Personal portfolio website showcasing my projects and skills.",
+		"link": "https://github.com/jhoncarlo-condy/portfolio",
+		"stacks": ["nextjs", "typescript", "tailwind", "shadcnui", "reactjs"]
+	},
+	{
+		"title": "Event booking",
+		"description": "Event booking system prototype using Next.JS and Tailwind CSS",
+		"link": "https://github.com/jhoncarlo-condy/fe-event-booking",
+		"stacks": ["Laravel", "nextjs", "typescript", "tailwind", "shadcnui", "reactjs,"]
+	},
+	{
+		"title": "Geolocator",
+		"description": "A simple geolocator application using third-party API named https://ipinfo.io",
+		"stacks": ["reactjs", "javascript"]
+	},
+	{
+		"title": "Simple blogging webiste",
+		"description": "Blogging website with realtime comment and interaction using Laravel Pusher",
+		"stacks": ["laravel", "javascript", "jquery", "bootstrap"]
+	},
+	{
+		"title": "DMCFI Leave Management System",
+		"description": "Leave Management System for Divine Mercy College Foundation Inc.",
+		"stacks": ["PHP", "javascript", "jquery", "bootstrap", "html"]
+	}
+]

@@ -49,10 +49,10 @@ export const Timeline = ({ data }: { data: TimelineEntry[] }) => {
 						</div>
 
 						<div className='relative pl-20 pr-4 md:pl-4 w-full'>
-							<h3 className='md:hidden block text-2xl mb-4 text-left font-bold text-neutral-500 dark:text-neutral-500'>
+							<h3 className='text-2xl mb-4 text-left font-bold text-neutral-500 dark:text-neutral-500'>
 								{item.title}
 							</h3>
-							<p className='hidden md:block text-neutral-400 dark:text-neutral-600 mt-2'>
+							<p className='text-neutral-400 dark:text-neutral-600 mt-2'>
 								{item.date} {/* Add your text here */}
 							</p>
 							{item.content}{' '}
