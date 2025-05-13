@@ -15,6 +15,10 @@
 		"skillName": "Tailwind CSS",
 		"skillPicture": "tailwind.svg"
 	},
+	{
+		"skillName": "ShadcnUI",
+		"skillPicture": "shadcnui.svg"
+	},
     {
 		"skillName": "Laravel Nova",
 		"skillPicture": "laravelnova.svg"
