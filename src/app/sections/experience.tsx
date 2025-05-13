@@ -10,7 +10,6 @@ const Experience = () => {
 		imageAlt: item.imageAlt,
 		content: (
 			<div className='space-y-2 text-neutral-700 dark:text-neutral-300'>
-				<p>{item.contentTitle}</p>
 				<ul className='list-disc pl-5 space-y-1'>
 					{item.contentList.map((point, index) => (
 						<li key={index}>{point}</li>
