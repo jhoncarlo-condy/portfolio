@@ -1,5 +1,6 @@
 'use client';
 import { ArrowDown, FileText, MessageCircleMore } from 'lucide-react';
+import Image from 'next/image';
 import React, { useEffect, useState } from 'react';
 import { Typewriter } from 'react-simple-typewriter';
 const Introduction = () => {
@@ -47,15 +48,37 @@ const Introduction = () => {
 					</div>
 				</div>
 			</div>
-			<div className='flex flex-col md:flex-row space-y-4 md:space-y-0 space-x-0 md:space-x-4 mt-20'>
-				<button className='flex flex-row items-center justify-center w-40 h-10 rounded-xl bg-black border dark:border-white border-transparent text-white text-lg hover:cursor-pointer hover:scale-[1.05] transition-transform'>
-					<FileText />
-					<span>Resume</span>
-				</button>
-				<button className='flex flex-row items-center justify-center w-40 h-10 rounded-xl bg-white border dark:border-white border-black text-black text-lg hover:cursor-pointer hover:scale-[1.05] transition-transform'>
-					<MessageCircleMore />
-					<span>Contact</span>
-				</button>
+			<div className='flex flex-row md:flex-row sm:flex-row space-x-2'>
+				<div className='relative h-10 w-10'>
+					<Image
+						src='/github.svg'
+						alt='GitHub'
+						fill
+						className='object-contain hover:cursor-pointer'
+						onClick={() => {
+							window.open('https://github.com/jhoncarlo-condy', '_blank');
+						}}
+					/>
+				</div>
+				<div className='relative h-10 w-10'>
+					<Image
+						src='/linkedin.svg'
+						alt='LinkedIn'
+						fill
+						className='object-contain hover:cursor-pointer'
+						onClick={() => {
+							window.open('https://www.linkedin.com/in/jhon-carlo-condy/', '_blank');
+						}}
+					/>
+				</div>
+			</div>
+			<div className='flex flex-col md:flex-row md:space-y-0 space-x-0 md:space-x-4 mt-5'>
+				<a href='/JHON_CARLO_CONDY_RESUME.pdf' download>
+					<button className='flex flex-row items-center justify-center w-40 h-10 rounded-xl bg-black border dark:border-white border-transparent text-white text-lg hover:cursor-pointer hover:scale-[1.05] transition-transform'>
+						<FileText />
+						<span>Resume</span>
+					</button>
+				</a>
 			</div>
 
 			<div
