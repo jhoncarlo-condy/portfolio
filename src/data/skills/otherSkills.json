@@ -1,16 +1,4 @@
 [
-	{
-		"skillName": "TypeScript",
-		"skillPicture": "typescript.svg"
-	},
-    {
-		"skillName": "JavaScript",
-		"skillPicture": "javascript.svg"
-	},
-	{
-		"skillName": "jQuery",
-		"skillPicture": "jquery.svg"
-	},
     {
 		"skillName": "Git",
 		"skillPicture": "git.svg"

@@ -1,4 +1,4 @@
-"use client"
+'use client';
 import React, { useState } from 'react';
 import {
 	Card,
@@ -33,7 +33,10 @@ const Project = () => {
 				{displayedProjects.map((project, index) => (
 					<Card
 						key={index}
-						className='w-full max-w-sm sm:max-w-2xl mx-auto mt-8 relative rounded-md px-5 py-2 hover:scale-[1.05] transition-transform'
+						className='
+    w-full max-w-xs sm:max-w-md md:max-w-xl mx-auto mt-8 relative rounded-md px-5 py-4
+    hover:scale-[1.05] transition-transform
+  '
 					>
 						<BorderTrail
 							style={{
@@ -55,19 +58,16 @@ const Project = () => {
 						</CardHeader>
 						<CardContent></CardContent>
 						<CardFooter>
-							<div className='flex flex-row gap-4'>
-								{project.stacks.map((stack, index) => (
-									<div key={index} className='flex flex-row items-center gap-2'>
+							<div className='flex flex-wrap gap-4'>
+								{project.stacks.map((stack, idx) => (
+									<div key={idx} className='flex flex-row items-center gap-2'>
 										<Image
 											src={stack + '.svg'}
-											alt='next'
+											alt={stack}
 											width={20}
 											height={20}
 										/>
-										<p className='text-[12px] sm:text-sm'>
-											{String(stack).charAt(0).toUpperCase() +
-												String(stack).slice(1)}
-										</p>
+										<p className='text-[12px] sm:text-sm capitalize'>{stack}</p>
 									</div>
 								))}
 							</div>

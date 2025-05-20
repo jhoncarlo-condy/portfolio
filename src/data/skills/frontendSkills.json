@@ -19,19 +19,31 @@
 		"skillName": "ShadcnUI",
 		"skillPicture": "shadcnui.svg"
 	},
-    {
+	{
 		"skillName": "Laravel Nova",
 		"skillPicture": "laravelnova.svg"
 	},
-    {
+	{
 		"skillName": "Livewire",
 		"skillPicture": "livewire.svg"
 	},
-    {
+	{
+		"skillName": "TypeScript",
+		"skillPicture": "typescript.svg"
+	},
+	{
+		"skillName": "JavaScript",
+		"skillPicture": "javascript.svg"
+	},
+	{
+		"skillName": "jQuery",
+		"skillPicture": "jquery.svg"
+	},
+	{
 		"skillName": "Bootstrap",
 		"skillPicture": "bootstrap.svg"
 	},
-    {
+	{
 		"skillName": "HTML5",
 		"skillPicture": "html.svg"
 	}
