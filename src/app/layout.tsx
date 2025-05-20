@@ -1,7 +1,7 @@
 import type { Metadata } from 'next';
 import { Geist, Geist_Mono } from 'next/font/google';
 import './globals.css';
-import { Brain, BriefcaseBusiness, FolderClosed, Home, MessageCircle, User } from 'lucide-react';
+import { Brain, BriefcaseBusiness, FolderClosed, Home } from 'lucide-react';
 import { FloatingNav } from '@/components/ui/floating-navbar';
 import { BackgroundBeamsWithCollision } from '@/components/ui/background-beams-with-collision';
 const geistSans = Geist({
