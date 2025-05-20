@@ -48,8 +48,8 @@ const Introduction = () => {
 					</div>
 				</div>
 			</div>
-			<div className='flex flex-row md:flex-row sm:flex-row space-x-2'>
-				<div className='relative h-10 w-10'>
+			<div className='flex flex-row space-x-4'>
+				<div className='relative h-8 w-8 sm:h-10 sm:w-10'>
 					<Image
 						src='/github.svg'
 						alt='GitHub'
@@ -60,18 +60,33 @@ const Introduction = () => {
 						}}
 					/>
 				</div>
-				<div className='relative h-10 w-10'>
+				<div className='relative h-8 w-8 sm:h-10 sm:w-10'>
 					<Image
 						src='/linkedin.svg'
 						alt='LinkedIn'
 						fill
 						className='object-contain hover:cursor-pointer'
 						onClick={() => {
-							window.open('https://www.linkedin.com/in/jhon-carlo-condy/', '_blank');
+							window.open(
+								'https://www.linkedin.com/in/jhon-carlo-condy/',
+								'_blank'
+							);
+						}}
+					/>
+				</div>
+				<div className='relative h-8 w-8 sm:h-10 sm:w-10'>
+					<Image
+						src='/mail.svg'
+						alt='Email'
+						fill
+						className='object-contain hover:cursor-pointer'
+						onClick={() => {
+							window.location.href = 'mailto:jhoncarlo.condy@example.com';
 						}}
 					/>
 				</div>
 			</div>
+
 			<div className='flex flex-col md:flex-row md:space-y-0 space-x-0 md:space-x-4 mt-5'>
 				<a href='/JHON_CARLO_CONDY_RESUME.pdf' download>
 					<button className='flex flex-row animate-subtle-pulse items-center justify-center w-40 h-10 rounded-xl bg-black border dark:border-white border-transparent text-white text-lg hover:cursor-pointer transition-transform'>
