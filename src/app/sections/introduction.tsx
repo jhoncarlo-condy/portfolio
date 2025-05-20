@@ -1,5 +1,5 @@
 'use client';
-import { ArrowDown, FileText, MessageCircleMore } from 'lucide-react';
+import { ArrowDown, FileText } from 'lucide-react';
 import Image from 'next/image';
 import React, { useEffect, useState } from 'react';
 import { Typewriter } from 'react-simple-typewriter';

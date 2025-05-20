@@ -1,7 +1,7 @@
 import type { Metadata } from 'next';
 import { Geist, Geist_Mono } from 'next/font/google';
 import './globals.css';
-import { Home, MessageCircle, User } from 'lucide-react';
+import { Brain, BriefcaseBusiness, FolderClosed, Home, MessageCircle, User } from 'lucide-react';
 import { FloatingNav } from '@/components/ui/floating-navbar';
 import { BackgroundBeamsWithCollision } from '@/components/ui/background-beams-with-collision';
 const geistSans = Geist({
@@ -30,19 +30,26 @@ export const metadata: Metadata = {
 const navItems = [
 	{
 		name: 'Home',
-		link: '/',
+		link: '#home',
 		icon: <Home className='h-4 w-4 text-neutral-500 dark:text-white' />,
 	},
 	{
-		name: 'About',
-		link: '/about',
-		icon: <User className='h-4 w-4 text-neutral-500 dark:text-white' />,
+		name: 'Skils',
+		link: '#skills',
+		icon: <Brain className='h-4 w-4 text-neutral-500 dark:text-white' />,
 	},
 	{
-		name: 'Contact',
-		link: '/contact',
+		name: 'Experience',
+		link: '#experience',
 		icon: (
-			<MessageCircle className='h-4 w-4 text-neutral-500 dark:text-white' />
+			<BriefcaseBusiness className='h-4 w-4 text-neutral-500 dark:text-white' />
+		),
+	},
+	{
+		name: 'Projects',
+		link: '#projects',
+		icon: (
+			<FolderClosed className='h-4 w-4 text-neutral-500 dark:text-white' />
 		),
 	},
 ];
