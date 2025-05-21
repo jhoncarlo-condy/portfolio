@@ -34,7 +34,7 @@ const navItems = [
 		icon: <Home className='h-4 w-4 text-neutral-500 dark:text-white' />,
 	},
 	{
-		name: 'Skils',
+		name: 'Skills',
 		link: '#skills',
 		icon: <Brain className='h-4 w-4 text-neutral-500 dark:text-white' />,
 	},

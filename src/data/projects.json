@@ -24,6 +24,6 @@
 	{
 		"title": "DMCFI Leave Management System",
 		"description": "Leave Management System for Divine Mercy College Foundation Inc.",
-		"stacks": ["PHP", "javascript", "jquery", "bootstrap", "html"]
+		"stacks": ["php", "javascript", "jquery", "bootstrap", "html"]
 	}
 ]
