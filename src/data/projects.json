@@ -9,7 +9,7 @@
 		"title": "Event booking",
 		"description": "Event booking system prototype using Next.JS and Tailwind CSS",
 		"link": "https://github.com/jhoncarlo-condy/fe-event-booking",
-		"stacks": ["Laravel", "nextjs", "typescript", "tailwind", "shadcnui", "reactjs"]
+		"stacks": ["laravel", "nextjs", "typescript", "tailwind", "shadcnui", "reactjs"]
 	},
 	{
 		"title": "Geolocator",

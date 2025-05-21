@@ -15,8 +15,8 @@ const geistMono = Geist_Mono({
 });
 
 export const metadata: Metadata = {
-	title: 'Jhon Carlo Condy',
-	description: 'Portfolio',
+	title: 'Jhon Carlo Condy - Website Portfolio',
+	description: 'Full-stack web developer with expertise in Next.js, Tailwind CSS, Laravel, and MySQL. Browse my portfolio to discover my work, technical skills, and growth throughout my development career.',
 	icons: {
         icon: [
             {
