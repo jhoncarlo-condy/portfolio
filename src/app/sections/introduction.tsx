@@ -88,7 +88,7 @@ const Introduction = () => {
 			</div>
 
 			<div className='flex flex-col md:flex-row md:space-y-0 space-x-0 md:space-x-4 mt-5'>
-				<a href='/JHON_CARLO_CONDY_RESUME.pdf' download>
+				<a href='/JC_CONDY_RESUME.pdf' download>
 					<button className='flex flex-row animate-subtle-pulse items-center justify-center w-40 h-10 rounded-xl bg-black border dark:border-white border-transparent text-white text-lg hover:cursor-pointer transition-transform'>
 						<FileText />
 						<span>Resume</span>
