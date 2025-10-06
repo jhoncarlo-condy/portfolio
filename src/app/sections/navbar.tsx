@@ -1,23 +1,32 @@
 import Image from 'next/image';
-import React from 'react';
+import React, { memo } from 'react';
 
-const NavBar = () => {
+const NavBar = memo(() => {
 	return (
-		<div className='flex justify-center mt-6' id="home">
-			<div className='items-center justify-between text-sm text-zinc-500 dark:text-zinc-400'>
+		<header className='flex justify-center mt-6' id='home'>
+			<nav className='items-center justify-between text-sm text-zinc-500 dark:text-zinc-400'>
 				<div className='animate-fade-down animate-once animate-ease-in-out'>
-					<div className='relative h-10 w-10'>
+					<a
+						href='#home'
+						className='relative h-10 w-10 rounded-full focus:outline-none focus:ring-2 focus:ring-primary focus:ring-offset-2 transition-transform hover:scale-105 block'
+						aria-label='Scroll to top'
+						title='Back to top'
+					>
 						<Image
 							src='/final-logo.png'
-							alt='logo'
+							alt='Jhon Carlo Condy Logo'
 							fill
-							className='object-contain hover:cursor-pointer'
+							className='object-contain'
+							priority
+							sizes='40px'
 						/>
-					</div>
+					</a>
 				</div>
-			</div>
-		</div>
+			</nav>
+		</header>
 	);
-};
+});
+
+NavBar.displayName = 'NavBar';
 
 export default NavBar;

@@ -16,15 +16,16 @@ const geistMono = Geist_Mono({
 
 export const metadata: Metadata = {
 	title: 'Jhon Carlo Condy - Website Portfolio',
-	description: 'Full-stack web developer with expertise in Next.js, Tailwind CSS, Laravel, and MySQL. Browse my portfolio to discover my work, technical skills, and growth throughout my development career.',
+	description:
+		'Full-stack web developer with expertise in Next.js, Tailwind CSS, Laravel, and MySQL. Browse my portfolio to discover my work, technical skills, and growth throughout my development career.',
 	icons: {
-        icon: [
-            {
-                url: "/final-logo.png", 
-                href: "/final-logo.png",
-            },
-        ],
-    },
+		icon: [
+			{
+				url: '/final-logo.png',
+				href: '/final-logo.png',
+			},
+		],
+	},
 };
 
 const navItems = [
@@ -48,9 +49,7 @@ const navItems = [
 	{
 		name: 'Projects',
 		link: '#projects',
-		icon: (
-			<FolderClosed className='h-4 w-4 text-neutral-500 dark:text-white' />
-		),
+		icon: <FolderClosed className='h-4 w-4 text-neutral-500 dark:text-white' />,
 	},
 ];
 

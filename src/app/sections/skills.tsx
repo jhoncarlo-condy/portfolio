@@ -1,190 +1,93 @@
 'use client';
-import React from 'react';
+import React, { memo, useMemo } from 'react';
 import { Tabs, TabsContent, TabsList, TabsTrigger } from '@/components/ui/tabs';
-import { AnimatedGroup } from '../../../components/motion-primitives/animated-group';
-import { Card, CardContent } from '@/components/ui/card';
-import Image from 'next/image';
-import { Label } from '@radix-ui/react-label';
+import SkillsGrid from '@/components/ui/skills-grid';
 import { skillType } from '@/types/skills';
 import frontendSkills from '@/data/skills/frontendSkills.json';
 import backendSkills from '@/data/skills/backendSkills.json';
 import otherSkills from '@/data/skills/otherSkills.json';
 
-const Skills = () => {
+interface SkillCategory {
+	value: string;
+	label: string;
+	skills: skillType[];
+	description?: string;
+}
+
+const Skills = memo(() => {
+	// Memoize skill categories to prevent unnecessary re-renders
+	const skillCategories: SkillCategory[] = useMemo(
+		() => [
+			{
+				value: 'frontend',
+				label: 'Frontend',
+				skills: frontendSkills as skillType[],
+				description: 'Frontend technologies and frameworks',
+			},
+			{
+				value: 'backend',
+				label: 'Backend',
+				skills: backendSkills as skillType[],
+				description: 'Backend technologies and databases',
+			},
+			{
+				value: 'other',
+				label: 'Other',
+				skills: otherSkills as skillType[],
+				description: 'Tools, DevOps, and other technologies',
+			},
+		],
+		[]
+	);
+
 	return (
-		<section id='skills'>
-			<div className='space-y-2 text-center sm:text-left'>
+		<section id='skills' className='scroll-mt-20'>
+			<header className='space-y-2 text-center sm:text-left'>
 				<h2 className='text-2xl sm:text-3xl font-bold'>Skills & Expertise</h2>
 				<p className='text-sm sm:text-base text-muted-foreground max-w-xl mx-auto sm:mx-0'>
-					A comprehensive overview of my technical abilities and soft skills
-					that enable me to deliver excellent results.
+					A comprehensive overview of my technical abilities and tools that
+					enable me to deliver excellent results.
 				</p>
-			</div>
+			</header>
 
 			<div className='mt-8 flex justify-center sm:justify-start xl:ml-30'>
 				<Tabs defaultValue='frontend' className='w-full max-w-md sm:max-w-2xl'>
-					<TabsList className='flex flex-wrap justify-center sm:justify-start gap-2'>
-						<TabsTrigger value='frontend' className='hover:cursor-pointer'>Frontend</TabsTrigger>
-						<TabsTrigger value='backend' className='hover:cursor-pointer'>Backend</TabsTrigger>
-						<TabsTrigger value='other' className='hover:cursor-pointer'>Other</TabsTrigger>
+					<TabsList
+						className='flex flex-wrap justify-center sm:justify-start gap-2'
+						role='tablist'
+						aria-label='Skills categories'
+					>
+						{skillCategories.map((category) => (
+							<TabsTrigger
+								key={category.value}
+								value={category.value}
+								className='transition-colors focus:outline-none focus:ring-2 focus:ring-primary focus:ring-offset-2'
+								aria-controls={`${category.value}-panel`}
+								title={category.description}
+							>
+								{category.label}
+							</TabsTrigger>
+						))}
 					</TabsList>
 
-					<TabsContent value='frontend'>
-						<AnimatedGroup
-							className='grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 gap-4 p-4 sm:p-6 md:p-8'
-							variants={{
-								container: {
-									visible: {
-										transition: { staggerChildren: 0.05 },
-									},
-								},
-								item: {
-									hidden: {
-										opacity: 0,
-										filter: 'blur(12px)',
-										y: -60,
-										rotateX: 90,
-									},
-									visible: {
-										opacity: 1,
-										filter: 'blur(0px)',
-										y: 0,
-										rotateX: 0,
-										transition: {
-											type: 'spring',
-											bounce: 0.3,
-											duration: 1,
-										},
-									},
-								},
-							}}
+					{skillCategories.map((category) => (
+						<TabsContent
+							key={category.value}
+							value={category.value}
+							id={`${category.value}-panel`}
+							role='tabpanel'
+							aria-labelledby={`${category.value}-tab`}
+							className='mt-6'
 						>
-							{frontendSkills.map((skill: skillType, idx) => (
-								<Card
-									key={idx}
-									className='w-full h-[100px] bg-white dark:bg-black shadow-md rounded-lg flex items-center justify-center text-center hover:cursor-pointer hover:scale-[1.05] transition-transform'
-								>
-									<CardContent className='flex flex-col items-center justify-center gap-y-2'>
-										<Image
-											src={skill.skillPicture}
-											alt={skill.skillName}
-											width={30}
-											height={30}
-										/>
-										<Label className='text-xs sm:text-sm'>
-											{skill.skillName}
-										</Label>
-									</CardContent>
-								</Card>
-							))}
-						</AnimatedGroup>
-					</TabsContent>
-
-					<TabsContent value='backend'>
-						<AnimatedGroup
-							className='grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 gap-4 p-4 sm:p-6 md:p-8'
-							variants={{
-								container: {
-									visible: {
-										transition: { staggerChildren: 0.05 },
-									},
-								},
-								item: {
-									hidden: {
-										opacity: 0,
-										filter: 'blur(12px)',
-										y: -60,
-										rotateX: 90,
-									},
-									visible: {
-										opacity: 1,
-										filter: 'blur(0px)',
-										y: 0,
-										rotateX: 0,
-										transition: {
-											type: 'spring',
-											bounce: 0.3,
-											duration: 1,
-										},
-									},
-								},
-							}}
-						>
-							{backendSkills.map((skill: skillType, idx) => (
-								<Card
-									key={idx}
-									className='w-full h-[100px] bg-white dark:bg-black shadow-md rounded-lg flex items-center justify-center text-center hover:cursor-pointer hover:scale-[1.05] transition-transform'
-								>
-									<CardContent className='flex flex-col items-center justify-center gap-y-2'>
-										<Image
-											src={skill.skillPicture}
-											alt={skill.skillName}
-											width={30}
-											height={30}
-										/>
-										<Label className='text-xs sm:text-sm'>
-											{skill.skillName}
-										</Label>
-									</CardContent>
-								</Card>
-							))}
-						</AnimatedGroup>
-					</TabsContent>
-
-					<TabsContent value='other'>
-						<AnimatedGroup
-							className='grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 gap-4 p-4 sm:p-6 md:p-8'
-							variants={{
-								container: {
-									visible: {
-										transition: { staggerChildren: 0.05 },
-									},
-								},
-								item: {
-									hidden: {
-										opacity: 0,
-										filter: 'blur(12px)',
-										y: -60,
-										rotateX: 90,
-									},
-									visible: {
-										opacity: 1,
-										filter: 'blur(0px)',
-										y: 0,
-										rotateX: 0,
-										transition: {
-											type: 'spring',
-											bounce: 0.3,
-											duration: 1,
-										},
-									},
-								},
-							}}
-						>
-							{otherSkills.map((skill: skillType, idx) => (
-								<Card
-									key={idx}
-									className='w-full h-[100px] bg-white dark:bg-black shadow-md rounded-lg flex items-center justify-center text-center hover:cursor-pointer hover:scale-[1.05] transition-transform'
-								>
-									<CardContent className='flex flex-col items-center justify-center gap-y-2'>
-										<Image
-											src={skill.skillPicture}
-											alt={skill.skillName}
-											width={30}
-											height={30}
-										/>
-										<Label className='text-xs sm:text-sm'>
-											{skill.skillName}
-										</Label>
-									</CardContent>
-								</Card>
-							))}
-						</AnimatedGroup>
-					</TabsContent>
+							<SkillsGrid skills={category.skills} />
+						</TabsContent>
+					))}
 				</Tabs>
 			</div>
 		</section>
 	);
-};
+});
+
+Skills.displayName = 'Skills';
 
 export default Skills;
