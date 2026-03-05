@@ -1,8 +1,9 @@
 import Image from 'next/image';
-import React, { memo, useMemo } from 'react';
+import React, { memo } from 'react';
+
+const CURRENT_YEAR = new Date().getFullYear();
 
 const Footer = memo(() => {
-	const currentYear = useMemo(() => new Date().getFullYear(), []);
 
 	return (
 		<footer className='w-full bg-gray-100 dark:bg-gray-900 py-8 mt-16 border-t border-gray-200 dark:border-gray-800'>
@@ -24,7 +25,7 @@ const Footer = memo(() => {
 					</div>
 
 					<div className='text-center md:text-right'>
-						<p>&copy; {currentYear} Jhon Carlo Condy. All rights reserved.</p>
+						<p>&copy; {CURRENT_YEAR} Jhon Carlo Condy. All rights reserved.</p>
 						<p className='text-xs mt-1 text-gray-500 dark:text-gray-500'>
 							Built with Next.js, TypeScript & Tailwind CSS
 						</p>

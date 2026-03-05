@@ -1,7 +1,7 @@
 'use client';
 import { ArrowDown, FileText } from 'lucide-react';
 import Image from 'next/image';
-import React, { memo, useMemo } from 'react';
+import React, { memo } from 'react';
 import { Typewriter } from 'react-simple-typewriter';
 import { Button } from '@/components/ui/button';
 import { useScroll } from '@/hooks/useScroll';
@@ -12,38 +12,34 @@ interface SocialLink {
 	src: string;
 }
 
-const Introduction = memo(() => {
-	const { isVisible } = useScroll({ threshold: 100 }); // Memoize social links to prevent unnecessary re-renders
-	const socialLinks: SocialLink[] = useMemo(
-		() => [
-			{
-				href: 'https://github.com/jhoncarlo-condy',
-				alt: 'GitHub Profile',
-				src: '/github.svg',
-			},
-			{
-				href: 'https://www.linkedin.com/in/jhon-carlo-condy/',
-				alt: 'LinkedIn Profile',
-				src: '/linkedin.svg',
-			},
-			{
-				href: 'mailto:jhoncarlo.condy@example.com',
-				alt: 'Email Contact',
-				src: '/mail.svg',
-			},
-		],
-		[]
-	);
+// Static data — defined outside component to avoid re-creation on every render
+const socialLinks: SocialLink[] = [
+	{
+		href: 'https://github.com/jhoncarlo-condy',
+		alt: 'GitHub Profile',
+		src: '/github.svg',
+	},
+	{
+		href: 'https://www.linkedin.com/in/jhon-carlo-condy/',
+		alt: 'LinkedIn Profile',
+		src: '/linkedin.svg',
+	},
+	{
+		href: 'mailto:jhoncarlo.condy@example.com',
+		alt: 'Email Contact',
+		src: '/mail.svg',
+	},
+];
 
-	const typewriterWords = useMemo(
-		() => [
-			'Backend Developer',
-			'Software Developer',
-			'Web Developer',
-			'Full Stack Developer',
-		],
-		[]
-	);
+const typewriterWords = [
+	'Backend Developer',
+	'Software Developer',
+	'Web Developer',
+	'Full Stack Developer',
+];
+
+const Introduction = memo(() => {
+	const { isVisible } = useScroll({ threshold: 100 });
 	return (
 		<div className='flex flex-col items-center justify-center w-full px-4 py-10 sm:w-1'>
 			<div className='flex flex-col sm:flex-row sm:space-x-1 my-6'>

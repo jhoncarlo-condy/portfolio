@@ -11,9 +11,7 @@ interface PortfolioLoaderProps {
 
 const loadingSteps = [
 	'Initializing portfolio...',
-	'Loading components...',
-	'Preparing experience...',
-	'Finalizing setup...',
+	'Almost ready...',
 ];
 
 // Pre-generate particle positions to ensure consistency
@@ -41,7 +39,6 @@ const PortfolioLoader: React.FC<PortfolioLoaderProps> = ({
 		setIsClient(true);
 
 		let currentStep = 0;
-
 		const typeText = (text: string, callback?: () => void) => {
 			let currentChar = 0;
 			setLoadingText('');
@@ -53,10 +50,10 @@ const PortfolioLoader: React.FC<PortfolioLoaderProps> = ({
 				} else {
 					clearInterval(typeInterval);
 					if (callback) {
-						setTimeout(callback, 500);
+						setTimeout(callback, 200);
 					}
 				}
-			}, 50);
+			}, 30);
 		};
 
 		const nextStep = () => {
@@ -64,19 +61,17 @@ const PortfolioLoader: React.FC<PortfolioLoaderProps> = ({
 				typeText(loadingSteps[currentStep], () => {
 					currentStep++;
 					if (currentStep < loadingSteps.length) {
-						setTimeout(nextStep, 800);
+						setTimeout(nextStep, 300);
 					} else {
-						// Final step - complete loading
 						setTimeout(() => {
 							setIsLoading(false);
 							onLoadingComplete?.();
-						}, 1000);
+						}, 400);
 					}
 				});
 			}
 		};
-		// Start the loading sequence
-		setTimeout(nextStep, 500);
+		setTimeout(nextStep, 200);
 	}, [onLoadingComplete]);
 
 	return (

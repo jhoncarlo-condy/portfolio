@@ -14,11 +14,18 @@ export const Timeline = ({ data }: { data: TimelineEntry[] }) => {
 	const [height, setHeight] = useState(0);
 
 	useEffect(() => {
-		if (ref.current) {
-			const rect = ref.current.getBoundingClientRect();
-			setHeight(rect.height);
-		}
-	}, [ref]);
+		const updateHeight = () => {
+			if (ref.current) {
+				setHeight(ref.current.getBoundingClientRect().height);
+			}
+		};
+
+		updateHeight();
+
+		const resizeObserver = new ResizeObserver(updateHeight);
+		if (ref.current) resizeObserver.observe(ref.current);
+		return () => resizeObserver.disconnect();
+	}, []);
 
 	const { scrollYProgress } = useScroll({
 		target: containerRef,
@@ -51,11 +58,10 @@ export const Timeline = ({ data }: { data: TimelineEntry[] }) => {
 						<div className='relative pl-20 pr-4 md:pl-4 w-full'>
 							<h3 className='block md:hidden text-2xl mb-4 text-left font-bold text-neutral-500 dark:text-neutral-500'>
 								{item.title}
-							</h3>
-							<p className='text-neutral-400 dark:text-neutral-600 mt-2'>
-								{item.date} {/* Add your text here */}
+							</h3>							<p className='text-neutral-400 dark:text-neutral-600 mt-2'>
+								{item.date}
 							</p>
-							{item.content}{' '}
+							{item.content}
 						</div>
 					</div>
 				))}

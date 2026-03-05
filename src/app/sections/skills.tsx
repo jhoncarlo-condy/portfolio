@@ -1,5 +1,5 @@
 'use client';
-import React, { memo, useMemo } from 'react';
+import React, { memo } from 'react';
 import { Tabs, TabsContent, TabsList, TabsTrigger } from '@/components/ui/tabs';
 import SkillsGrid from '@/components/ui/skills-grid';
 import { skillType } from '@/types/skills';
@@ -14,31 +14,29 @@ interface SkillCategory {
 	description?: string;
 }
 
+// Static data — defined outside component to avoid re-creation on every render
+const skillCategories: SkillCategory[] = [
+	{
+		value: 'frontend',
+		label: 'Frontend',
+		skills: frontendSkills as skillType[],
+		description: 'Frontend technologies and frameworks',
+	},
+	{
+		value: 'backend',
+		label: 'Backend',
+		skills: backendSkills as skillType[],
+		description: 'Backend technologies and databases',
+	},
+	{
+		value: 'other',
+		label: 'Other',
+		skills: otherSkills as skillType[],
+		description: 'Tools, DevOps, and other technologies',
+	},
+];
+
 const Skills = memo(() => {
-	// Memoize skill categories to prevent unnecessary re-renders
-	const skillCategories: SkillCategory[] = useMemo(
-		() => [
-			{
-				value: 'frontend',
-				label: 'Frontend',
-				skills: frontendSkills as skillType[],
-				description: 'Frontend technologies and frameworks',
-			},
-			{
-				value: 'backend',
-				label: 'Backend',
-				skills: backendSkills as skillType[],
-				description: 'Backend technologies and databases',
-			},
-			{
-				value: 'other',
-				label: 'Other',
-				skills: otherSkills as skillType[],
-				description: 'Tools, DevOps, and other technologies',
-			},
-		],
-		[]
-	);
 
 	return (
 		<section id='skills' className='scroll-mt-20'>

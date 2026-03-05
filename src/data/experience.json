@@ -1,5 +1,18 @@
 [
 	{
+		"title": "VIPTutors Co.",
+		"date": "June 2025 - Present",
+		"image": "nextjs.svg",
+		"imageAlt": "VIPTutors Co.",
+		"contentList": [
+			"Migrated existing applications from CodeIgniter to Laravel, improving scalability, maintainability, and performance.",
+			"Integrated AI-powered functionalities (e.g., speech analysis, NLP, auto-generation) using APIs like AssemblyAI and OpenAI.",
+			"Developed and maintained responsive front-end interfaces using Vue 3 (Composition API).",
+			"Supported and maintained legacy CodeIgniter systems during transition phases.",
+			"Designed and implemented RESTful APIs in Laravel with authentication, caching, and queue management."
+		]
+	},
+	{
 		"title": "ADEC Innovations",
 		"date": "November 2024 - March 2025",
 		"image": "nextjs.svg",
