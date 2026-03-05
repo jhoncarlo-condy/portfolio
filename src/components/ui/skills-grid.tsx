@@ -11,6 +11,7 @@ interface SkillsGridProps {
 
 // Shared animation variants to reduce bundle size
 const skillsAnimationVariants = {
+
 	container: {
 		visible: {
 			transition: { staggerChildren: 0.05 },
@@ -27,9 +28,8 @@ const skillsAnimationVariants = {
 			opacity: 1,
 			filter: 'blur(0px)',
 			y: 0,
-			rotateX: 0,
-			transition: {
-				type: 'spring',
+			rotateX: 0,			transition: {
+				type: 'spring' as const,
 				bounce: 0.3,
 				duration: 1,
 			},
