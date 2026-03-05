@@ -55,9 +55,9 @@ const Skills = memo(() => {
 						role='tablist'
 						aria-label='Skills categories'
 					>
-						{skillCategories.map((category) => (
+						{skillCategories.map((category, categoryIndex) => (
 							<TabsTrigger
-								key={category.value}
+								key={`${category.value}-${categoryIndex}`}
 								value={category.value}
 								className='transition-colors focus:outline-none focus:ring-2 focus:ring-primary focus:ring-offset-2'
 								aria-controls={`${category.value}-panel`}
@@ -68,9 +68,9 @@ const Skills = memo(() => {
 						))}
 					</TabsList>
 
-					{skillCategories.map((category) => (
+					{skillCategories.map((category, categoryIndex) => (
 						<TabsContent
-							key={category.value}
+							key={`${category.value}-${categoryIndex}`}
 							value={category.value}
 							id={`${category.value}-panel`}
 							role='tabpanel'

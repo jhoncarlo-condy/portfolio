@@ -4,12 +4,29 @@
 		"date": "June 2025 - Present",
 		"image": "nextjs.svg",
 		"imageAlt": "VIPTutors Co.",
+		"techStack": [
+			{ "name": "Laravel", "icon": "laravel.svg" },
+			{ "name": "Vue.js", "icon": "vuejs.svg" },
+			{ "name": "PHP", "icon": "php.svg" },
+			{ "name": "MySQL", "icon": "mysql.svg" },
+			{ "name": "TypeScript", "icon": "typescript.svg" },
+			{ "name": "CodeIgniter", "icon": "codeigniter.svg" },
+			{ "name": "Pinia", "icon": "pinia.svg" },
+			{ "name": "Tanstack", "icon": "tanstack.svg" },
+			{ "name": "OpenAI", "icon": "openai.svg" },
+			{ "name": "Deepseek", "icon": "deepseek.svg" },
+			{ "name": "Github", "icon": "github.svg" }
+
+		],
 		"contentList": [
 			"Migrated existing applications from CodeIgniter to Laravel, improving scalability, maintainability, and performance.",
 			"Integrated AI-powered functionalities (e.g., speech analysis, NLP, auto-generation) using APIs like AssemblyAI and OpenAI.",
 			"Developed and maintained responsive front-end interfaces using Vue 3 (Composition API).",
 			"Supported and maintained legacy CodeIgniter systems during transition phases.",
-			"Designed and implemented RESTful APIs in Laravel with authentication, caching, and queue management."
+			"Designed and implemented RESTful APIs in Laravel with authentication, caching, and queue management.",
+			"Zoom Meeting Integration for seamless communication between tutors and students, enhancing user experience and engagement.",
+			"Leveraged OpenAI, Gemini, and DeepSeek APIs to power post-session summaries, automated quiz and flashcard generation, and personalized learning recommendations.",
+			"Utilize AI services such as AssemblyAI for speech analysis, GPTZero for content originality detection, and SpeechSuper for speech-to-text conversion."
 		]
 	},
 	{
@@ -17,9 +34,21 @@
 		"date": "November 2024 - March 2025",
 		"image": "nextjs.svg",
 		"imageAlt": "ADEC Innovations office",
+		"techStack": [
+			{ "name": "React", "icon": "reactjs.svg" },
+			{ "name": "TypeScript", "icon": "typescript.svg" },
+			{ "name": "ShadcnUI", "icon": "shadcnui.svg" },
+			{ "name": "Tailwind", "icon": "tailwind.svg" },
+			{ "name": "Zustand", "icon": "zustand.svg" },
+			{ "name": "Tanstack", "icon": "tanstack.svg" },
+			{ "name": "GitLab", "icon": "gitlab.svg" }
+
+
+		],
 		"contentList": [
-			"Developed an internal web application using React, React Query, ShadcnUI and TypeScript that enabled users to access the company’s resources with ease ",
-			"Maintain and support internal web applications by developing and enhancing features using AngularJS for the frontend and Java Spring Boot for the backend"
+			"Developed an internal web application using React, React Query, ShadcnUI and TypeScript that enabled users to access the company's resources with ease ",
+			"Maintain and support internal web applications by developing and enhancing features using AngularJS for the frontend and Java Spring Boot for the backend",
+			"Collaborate with cross-functional teams to gather requirements, design solutions, and implement features that meet business needs"
 		]
 	},
 	{
@@ -27,13 +56,27 @@
 		"date": "March 2022 - August 2024",
 		"image": "gitlab.svg",
 		"imageAlt": "Grapelabs Technologies Corp.",
+		"techStack": [
+			{ "name": "Laravel", "icon": "laravel.svg" },
+			{ "name": "Vue.js", "icon": "vuejs.svg" },
+			{ "name": "TypeScript", "icon": "typescript.svg" },
+			{ "name": "MySQL", "icon": "mysql.svg" },
+			{ "name": "AWS", "icon": "aws.svg" },
+			{ "name": "Laravel Nova", "icon": "laravelnova.svg" },
+			{ "name": "Tailwind", "icon": "tailwind.svg" },
+			{ "name": "n8n", "icon": "n8n.svg" },
+			{ "name": "GitLab", "icon": "gitlab.svg" }
+		],
 		"contentList": [
 			"Maintain and develop CRM Website",
 			"Integrate third-party services and payment solutions",
 			"Implement unit tests to ensure quality code",
 			"Secure customer information using micro-services such as AWS",
 			"Creating reports for analytics using MySQL and VueJS",
-			"Create and Manage admin panel using Laravel Nova"
+			"Create and Manage admin panel using Laravel Nova",
+			"Data Synchronization and Workflow Automation using n8n and directus",
+			"Pipedrive CRM Integration for efficient lead management and sales tracking, enhancing the sales process and improving customer relationship management.",
+			"UTM Tracking and Analytics Implementation for comprehensive campaign performance monitoring and data-driven marketing strategies."			
 		]
 	},
 	{
@@ -41,8 +84,18 @@
 		"date": "May 2021 - February 2022",
 		"image": "aws.svg",
 		"imageAlt": "Hivelabs Technologies Corp.",
+		"techStack": [
+			{ "name": "Laravel", "icon": "laravel.svg" },
+			{ "name": "Livewire", "icon": "livewire.svg" },
+			{ "name": "PHP", "icon": "php.svg" },
+			{ "name": "MySQL", "icon": "mysql.svg" },
+			{ "name": "Firebase", "icon": "firebase.svg" },
+			{ "name": "JWT", "icon": "jwt.svg" },
+			{ "name": "Bitbucket", "icon": "bitbucket.svg" },
+			{ "name": "Bootstrap", "icon": "bootstrap.svg" }
+		],
 		"contentList": [
-			"Collaborate with mobile developers to maintain seamless implementation of API’s",
+			"Collaborate with mobile developers to maintain seamless implementation of API's",
 			"Integrate third party services and optimize API for better performance and response time",
 			"Manage admin panel using Laravel and Livewire",
 			"Complete detailed programming and development tasks for back-end server code",

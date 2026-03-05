@@ -46,5 +46,17 @@
 	{
 		"skillName": "HTML5",
 		"skillPicture": "html.svg"
+	},
+	{
+		"skillName": "Tanstack Query",
+		"skillPicture": "tanstack.svg"
+	},
+	{
+		"skillName": "Zustand",
+		"skillPicture": "zustand.svg"
+	},
+	{
+		"skillName": "Pinia",
+		"skillPicture": "pinia.svg"
 	}
 ]

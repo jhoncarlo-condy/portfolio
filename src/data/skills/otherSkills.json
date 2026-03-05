@@ -42,5 +42,17 @@
     {
 		"skillName": "Jira",
 		"skillPicture": "jira.svg"
+	},
+	{
+		"skillName": "n8n",
+		"skillPicture": "n8n.svg"
+	},
+	{
+		"skillName": "OpenAI",
+		"skillPicture": "openai.svg"
+	},
+	{
+		"skillName": "Deepseek",
+		"skillPicture": "deepseek.svg"
 	}
 ]

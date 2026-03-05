@@ -22,5 +22,9 @@
     {
 		"skillName": "Livewire",
 		"skillPicture": "livewire.svg"
+	},
+	{
+		"skillName": "CodeIgniter",
+		"skillPicture": "codeigniter.svg"
 	}
 ]
