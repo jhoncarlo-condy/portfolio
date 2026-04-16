@@ -1,7 +1,6 @@
 import Image from 'next/image';
-import React, { memo } from 'react';
 
-const NavBar = memo(() => {
+export default function NavBar() {
 	return (
 		<header className='flex justify-center mt-6' id='home'>
 			<nav className='items-center justify-between text-sm text-zinc-500 dark:text-zinc-400'>
@@ -25,8 +24,4 @@ const NavBar = memo(() => {
 			</nav>
 		</header>
 	);
-});
-
-NavBar.displayName = 'NavBar';
-
-export default NavBar;
+}

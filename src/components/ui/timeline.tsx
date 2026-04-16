@@ -1,10 +1,11 @@
 'use client';
 import { useScroll, useTransform, motion } from 'motion/react';
-import React, { useEffect, useRef, useState } from 'react';
+import { useEffect, useRef, useState, type ReactNode } from 'react';
 
 interface TimelineEntry {
 	title: string;
-	content: React.ReactNode;
+	role: string;
+	content: ReactNode;
 	date: string;
 }
 
@@ -16,7 +17,8 @@ export const Timeline = ({ data }: { data: TimelineEntry[] }) => {
 	useEffect(() => {
 		const updateHeight = () => {
 			if (ref.current) {
-				setHeight(ref.current.getBoundingClientRect().height);
+				const nextHeight = Math.round(ref.current.getBoundingClientRect().height);
+				setHeight((prev) => (prev === nextHeight ? prev : nextHeight));
 			}
 		};
 
@@ -40,9 +42,10 @@ export const Timeline = ({ data }: { data: TimelineEntry[] }) => {
 			className='w-full bg-white dark:bg-neutral-950 font-sans md:px-10'
 			ref={containerRef}
 		>
-			<div ref={ref} className='relative max-w-7xl mx-auto pb-20'>			{data.map((item, index) => (
+			<div ref={ref} className='relative max-w-7xl mx-auto pb-20'>
+				{data.map((item) => (
 					<div
-						key={`${item.title}-${index}`}
+						key={`${item.title}-${item.date}`}
 						className='flex justify-start pt-10 md:pt-40 md:gap-10'
 					>
 						<div className='sticky flex flex-col md:flex-row z-40 items-center top-40 self-start max-w-xs lg:max-w-sm md:w-full'>
@@ -57,7 +60,11 @@ export const Timeline = ({ data }: { data: TimelineEntry[] }) => {
 						<div className='relative pl-20 pr-4 md:pl-4 w-full'>
 							<h3 className='block md:hidden text-2xl mb-4 text-left font-bold text-neutral-500 dark:text-neutral-500'>
 								{item.title}
-							</h3>							<p className='text-neutral-400 dark:text-neutral-600 mt-2'>
+							</h3>
+							<p className='text-neutral-400 font-semibold dark:text-neutral-600 mt-2'>
+								{item.role}
+							</p>
+							<p className='text-neutral-400 dark:text-neutral-600 mt-2'>
 								{item.date}
 							</p>
 							{item.content}

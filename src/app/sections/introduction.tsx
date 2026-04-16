@@ -1,7 +1,8 @@
 'use client';
+
+import { memo } from 'react';
 import { ArrowDown, FileText } from 'lucide-react';
 import Image from 'next/image';
-import React, { memo } from 'react';
 import { Typewriter } from 'react-simple-typewriter';
 import { Button } from '@/components/ui/button';
 import { useScroll } from '@/hooks/useScroll';
@@ -40,6 +41,7 @@ const typewriterWords = [
 
 const Introduction = memo(() => {
 	const { isVisible } = useScroll({ threshold: 100 });
+
 	return (
 		<div className='flex flex-col items-center justify-center w-full px-4 py-10 sm:w-1'>
 			<div className='flex flex-col sm:flex-row sm:space-x-1 my-6'>
@@ -60,26 +62,29 @@ const Introduction = memo(() => {
 			</div>
 
 			<div className='flex flex-row space-x-4'>
-				{socialLinks.map((link, index) => (
-					<a
-						key={index}
-						href={link.href}
-						target={link.href.startsWith('mailto:') ? '_self' : '_blank'}
-						rel={link.href.startsWith('mailto:') ? '' : 'noopener noreferrer'}
-						className='relative h-8 w-8 sm:h-10 sm:w-10 rounded-full hover:scale-110 transition-transform focus:outline-none focus:ring-2 focus:ring-primary focus:ring-offset-2'
-						aria-label={link.alt}
-						title={link.alt}
-					>
-						<Image
-							src={link.src}
-							alt={link.alt}
-							fill
-							className='object-contain'
-							loading='eager'
-							priority
-						/>
-					</a>
-				))}
+				{socialLinks.map((link) => {
+					const isMailto = link.href.startsWith('mailto:');
+					return (
+						<a
+							key={link.href}
+							href={link.href}
+							target={isMailto ? undefined : '_blank'}
+							rel={isMailto ? undefined : 'noopener noreferrer'}
+							className='relative h-8 w-8 sm:h-10 sm:w-10 rounded-full hover:scale-110 transition-transform focus:outline-none focus:ring-2 focus:ring-primary focus:ring-offset-2'
+							aria-label={link.alt}
+							title={link.alt}
+						>
+							<Image
+								src={link.src}
+								alt={link.alt}
+								fill
+								className='object-contain'
+								loading='eager'
+								priority
+							/>
+						</a>
+					);
+				})}
 			</div>
 
 			<div className='flex flex-col md:flex-row md:space-y-0 space-x-0 md:space-x-4 mt-8'>
@@ -122,3 +127,4 @@ const Introduction = memo(() => {
 Introduction.displayName = 'Introduction';
 
 export default Introduction;
+

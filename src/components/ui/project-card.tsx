@@ -1,5 +1,5 @@
 'use client';
-import React, { memo } from 'react';
+import { memo } from 'react';
 import {
 	Card,
 	CardContent,
@@ -54,9 +54,9 @@ const ProjectCard = memo(({ project }: ProjectCardProps) => {
 			<CardContent className='py-2' />
 			<CardFooter>
 				<div className='flex flex-wrap gap-3'>
-					{project.stacks.map((stack, idx) => (
+					{project.stacks.map((stack) => (
 						<div
-							key={`${stack}-${idx}`}
+							key={stack}
 							className='flex flex-row items-center gap-2 p-1.5 rounded-md bg-muted/50'
 						>
 							<div className='relative w-[18px] h-[18px]'>

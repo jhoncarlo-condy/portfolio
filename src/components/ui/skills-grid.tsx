@@ -1,5 +1,5 @@
 'use client';
-import React, { memo } from 'react';
+import { memo } from 'react';
 import { AnimatedGroup } from '../../../components/motion-primitives/animated-group';
 import { skillType } from '@/types/skills';
 import SkillCard from './skill-card';
@@ -11,7 +11,6 @@ interface SkillsGridProps {
 
 // Shared animation variants to reduce bundle size
 const skillsAnimationVariants = {
-
 	container: {
 		visible: {
 			transition: { staggerChildren: 0.05 },
@@ -28,7 +27,8 @@ const skillsAnimationVariants = {
 			opacity: 1,
 			filter: 'blur(0px)',
 			y: 0,
-			rotateX: 0,			transition: {
+			rotateX: 0,
+			transition: {
 				type: 'spring' as const,
 				bounce: 0.3,
 				duration: 1,
@@ -47,8 +47,11 @@ const SkillsGrid = memo(
 				className={gridClassName}
 				variants={skillsAnimationVariants}
 			>
-				{skills.map((skill: skillType, idx) => (
-					<SkillCard key={`${skill.skillName}-${idx}`} skill={skill} />
+				{skills.map((skill: skillType) => (
+					<SkillCard
+						key={`${skill.skillName}-${skill.skillPicture}`}
+						skill={skill}
+					/>
 				))}
 			</AnimatedGroup>
 		);

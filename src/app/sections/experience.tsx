@@ -1,7 +1,9 @@
-import { Timeline } from '@/components/ui/timeline';
-import React, { memo } from 'react';
+'use client';
+
+import { memo } from 'react';
 import Image from 'next/image';
 import experience from '@/data/experience.json';
+import { Timeline } from '@/components/ui/timeline';
 
 interface TechStackItem {
 	name: string;
@@ -10,6 +12,7 @@ interface TechStackItem {
 
 interface ExperienceItem {
 	title: string;
+	role: string;
 	date: string;
 	image: string;
 	imageAlt: string;
@@ -20,6 +23,7 @@ interface ExperienceItem {
 // Derived once at module load — data is static JSON, no need for useMemo
 const experienceData = experience.map((item: ExperienceItem) => ({
 	title: item.title,
+	role: item.role,
 	date: item.date,
 	content: (
 		<div className='space-y-4 text-neutral-700 dark:text-neutral-300'>
@@ -30,15 +34,16 @@ const experienceData = experience.map((item: ExperienceItem) => ({
 					</li>
 				))}
 			</ul>
+
 			{item.techStack?.length > 0 && (
 				<div className='pt-2'>
 					<p className='text-xs font-semibold uppercase tracking-widest text-neutral-400 dark:text-neutral-500 mb-2'>
 						Tech Stack
 					</p>
 					<div className='flex flex-wrap gap-2'>
-						{item.techStack.map((tech, techIndex) => (
+						{item.techStack.map((tech) => (
 							<div
-								key={`${item.title}-tech-${tech.name}-${techIndex}`}
+								key={`${item.title}-tech-${tech.name}`}
 								className='flex items-center gap-1.5 px-2.5 py-1 rounded-full bg-neutral-100 dark:bg-neutral-800 border border-neutral-200 dark:border-neutral-700 text-xs font-medium text-neutral-700 dark:text-neutral-300'
 							>
 								<Image
@@ -47,6 +52,7 @@ const experienceData = experience.map((item: ExperienceItem) => ({
 									width={14}
 									height={14}
 									className='object-contain'
+									sizes='14px'
 								/>
 								{tech.name}
 							</div>
@@ -75,3 +81,4 @@ const Experience = memo(() => {
 Experience.displayName = 'Experience';
 
 export default Experience;
+

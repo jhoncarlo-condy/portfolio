@@ -1,8 +1,9 @@
 import type { Metadata } from 'next';
 import { Geist, Geist_Mono } from 'next/font/google';
 import './globals.css';
-import { Brain, BriefcaseBusiness, FolderClosed, Home } from 'lucide-react';
-import { FloatingNav } from '@/components/ui/floating-navbar';
+import FloatingNavClient from '@/components/ui/floating-nav-client';
+import type { ReactNode } from 'react';
+
 const geistSans = Geist({
 	variable: '--font-geist-sans',
 	subsets: ['latin'],
@@ -27,35 +28,10 @@ export const metadata: Metadata = {
 	},
 };
 
-const navItems = [
-	{
-		name: 'Home',
-		link: '#home',
-		icon: <Home className='h-4 w-4 text-neutral-500 dark:text-white' />,
-	},
-	{
-		name: 'Skills',
-		link: '#skills',
-		icon: <Brain className='h-4 w-4 text-neutral-500 dark:text-white' />,
-	},
-	{
-		name: 'Experience',
-		link: '#experience',
-		icon: (
-			<BriefcaseBusiness className='h-4 w-4 text-neutral-500 dark:text-white' />
-		),
-	},
-	{
-		name: 'Projects',
-		link: '#projects',
-		icon: <FolderClosed className='h-4 w-4 text-neutral-500 dark:text-white' />,
-	},
-];
-
 export default function RootLayout({
 	children,
 }: Readonly<{
-	children: React.ReactNode;
+	children: ReactNode;
 }>) {
 	return (
 		<html lang='en'>
@@ -64,7 +40,7 @@ export default function RootLayout({
 			>
 				<div className='min-h-screen bg-white text-black dark:bg-black dark:text-white relative overflow-hidden'>
 					{children}
-					<FloatingNav navItems={navItems} />
+					<FloatingNavClient />
 				</div>
 			</body>
 		</html>

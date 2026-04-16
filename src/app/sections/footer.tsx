@@ -1,10 +1,8 @@
 import Image from 'next/image';
-import React, { memo } from 'react';
 
 const CURRENT_YEAR = new Date().getFullYear();
 
-const Footer = memo(() => {
-
+export default function Footer() {
 	return (
 		<footer className='w-full bg-gray-100 dark:bg-gray-900 py-8 mt-16 border-t border-gray-200 dark:border-gray-800'>
 			<div className='max-w-screen-xl mx-auto px-4'>
@@ -34,8 +32,4 @@ const Footer = memo(() => {
 			</div>
 		</footer>
 	);
-});
-
-Footer.displayName = 'Footer';
-
-export default Footer;
+}

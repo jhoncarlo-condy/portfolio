@@ -1,5 +1,6 @@
 'use client';
-import React, { memo } from 'react';
+
+import { memo } from 'react';
 import { Tabs, TabsContent, TabsList, TabsTrigger } from '@/components/ui/tabs';
 import SkillsGrid from '@/components/ui/skills-grid';
 import { skillType } from '@/types/skills';
@@ -37,7 +38,6 @@ const skillCategories: SkillCategory[] = [
 ];
 
 const Skills = memo(() => {
-
 	return (
 		<section id='skills' className='scroll-mt-20'>
 			<header className='space-y-2 text-center sm:text-left'>
@@ -55,10 +55,11 @@ const Skills = memo(() => {
 						role='tablist'
 						aria-label='Skills categories'
 					>
-						{skillCategories.map((category, categoryIndex) => (
+						{skillCategories.map((category) => (
 							<TabsTrigger
-								key={`${category.value}-${categoryIndex}`}
+								key={category.value}
 								value={category.value}
+								id={`${category.value}-tab`}
 								className='transition-colors focus:outline-none focus:ring-2 focus:ring-primary focus:ring-offset-2'
 								aria-controls={`${category.value}-panel`}
 								title={category.description}
@@ -68,9 +69,9 @@ const Skills = memo(() => {
 						))}
 					</TabsList>
 
-					{skillCategories.map((category, categoryIndex) => (
+					{skillCategories.map((category) => (
 						<TabsContent
-							key={`${category.value}-${categoryIndex}`}
+							key={category.value}
 							value={category.value}
 							id={`${category.value}-panel`}
 							role='tabpanel'
@@ -89,3 +90,4 @@ const Skills = memo(() => {
 Skills.displayName = 'Skills';
 
 export default Skills;
+

@@ -1,7 +1,6 @@
 'use client';
-import { ReactNode } from 'react';
 import { motion, Variants } from 'motion/react';
-import React from 'react';
+import React, { ReactNode } from 'react';
 
 export type PresetType =
   | 'fade'
@@ -131,11 +130,15 @@ function AnimatedGroup({
       variants={containerVariants}
       className={className}
     >
-      {React.Children.map(children, (child, index) => (
-        <MotionChild key={index} variants={itemVariants}>
-          {child}
-        </MotionChild>
-      ))}
+      {React.Children.map(children, (child, index) => {
+        const key =
+          React.isValidElement(child) && child.key != null ? child.key : index;
+        return (
+          <MotionChild key={key} variants={itemVariants}>
+            {child}
+          </MotionChild>
+        );
+      })}
     </MotionComponent>
   );
 }

@@ -1,7 +1,8 @@
 [
 	{
 		"title": "VIPTutors Co.",
-		"date": "June 2025 - Present",
+		"role": "Full Stack Developer",
+		"date": "June 2025 - April 6, 2025",
 		"image": "nextjs.svg",
 		"imageAlt": "VIPTutors Co.",
 		"techStack": [
@@ -31,6 +32,7 @@
 	},
 	{
 		"title": "ADEC Innovations",
+		"role": "Software Developer",
 		"date": "November 2024 - March 2025",
 		"image": "nextjs.svg",
 		"imageAlt": "ADEC Innovations office",
@@ -53,6 +55,7 @@
 	},
 	{
 		"title": "Grapelabs Technologies Corp.",
+		"role": "Web Developer",
 		"date": "March 2022 - August 2024",
 		"image": "gitlab.svg",
 		"imageAlt": "Grapelabs Technologies Corp.",
@@ -81,6 +84,7 @@
 	},
 	{
 		"title": "Hivelabs Technologies Corp.",
+		"role": "Backend Developer",
 		"date": "May 2021 - February 2022",
 		"image": "aws.svg",
 		"imageAlt": "Hivelabs Technologies Corp.",
